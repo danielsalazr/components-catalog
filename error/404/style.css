@@ -1,0 +1,208 @@
+html{
+  font-size: 62.5%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+    /* background: linear-gradient(0deg, #9BAFD9ff, #849BCBff, #6D87BCff, #5673AEff, #3E5FA0ff, #274B91ff, #103783ff); */
+    /* background: linear-gradient(0deg, hsla(302, 33%, 48%, 1) 17%, hsla(291, 33%, 46%, 1) 38%, hsla(267, 35%, 43%, 1) 57%, hsla(220, 78%, 29%, 1) 78%); */
+    background-image: linear-gradient(#21c08b, #8f57fd);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+ 
+.header {
+    align-items: center;
+    /* background: #8f57fd; */
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+  }
+  
+  .header__img {
+    margin-left: 30px;
+    width: 200px;
+  }
+  
+  .header__menu {
+      margin-right: 30px;
+  }
+  
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    margin: 0px 0px 0px -14px;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+  }
+  
+  .header__menu:hover ul, ul:hover {
+      display: block;
+  }
+  
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .header__menu--profile {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 0px 0px 40px 40px;
+  }
+  
+  .main__title {
+    color: white;
+    font-size: 25px;
+  }
+
+  .unable{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: antiquewhite;
+      min-height: 650px ;
+      min-width: 650px;
+      padding: 50px;
+  }
+
+  .message{
+      align-items: center;
+      display: flex;
+      font-size:5rem;
+      justify-content: center;
+      
+  }
+
+  .animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+  }
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+  }
+
+  
+@keyframes hinge {
+  0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  20%, 60% {transform: rotate(-80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  100% {transform: translateY(700px);}
+}
+.hinge {
+  margin: 0px;
+  animation-name: hinge;
+}
+
+  .m404 {
+      display:flex;
+      font-size: 4rem;
+      color: antiquewhite;
+      align-items: center;
+      justify-content: center;
+      padding: 00px;
+  }
+  .m4{
+    font-size: 4rem;
+  }
+
+  .error {
+     align-items: center;
+     color: antiquewhite;
+     display: flex;
+     font-size: 4rem;
+     justify-content: center;
+     padding-bottom: 5rem;
+  }
+
+  
+  .footer {
+    align-items: center;
+    /* background-color: #8f57fd; */
+    display: flex;
+    height: 100px;
+    width: 100%;
+    
+    padding: 1px;
+  }
+  
+  .footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .input {
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
+  }
+  
+  ::placeholder {
+    color: white;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .main__description--title {
+      font-size: 30px;
+    }
+  
+    .footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
