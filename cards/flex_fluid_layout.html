@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* width: 30%; */
+            padding: 16px;
+            border: 1px solid #000000;
+            border-radius: 7px;
+            /* width: 30%; */
+            width: clamp(200px, 30%, 450px);
+            /* min-width: 200px; */
+            
+
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            text-align: center;
+            
+            /* width: 30%; */
+        }
+
+        .card__title{
+            font-size: 28px;
+            font-weight: 400;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        .name{
+            flex:1 0 130px;
+        }
+        .email{
+            flex:1 0 130px;
+        }
+        button{
+            flex:1 0 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label class="card__title">Card Title</label>
+            <input type="text" name="" placeholder="Name" id="name" class="name">
+            <input type="email" name="" placeholder="Example@gmail.com" id="email" class="email">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</html>

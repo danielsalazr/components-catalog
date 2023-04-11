@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .ModalBackground {
+            background: rgba(32,35,41,.8);
+            position: fixed;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Título de la ventana modal</h2>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="nombre">Nombre:</label><br>
+              <input type="text" id="nombre" name="nombre"><br>
+              <label for="apellido">Apellido:</label><br>
+              <input type="text" id="apellido" name="apellido"><br>
+            </form> 
+            <button id="confirmar">Confirmar</button>
+            <button id="cancelar">Cancelar</button>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      // Obtener el modal
+      var modal = document.getElementById("myModal");
+      
+      // Obtener el botón que abre el modal
+      var btn = document.getElementById("myBtn");
+      
+      // Obtener el elemento <span> que cierra el modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // Obtener los botones de confirmación y cancelación
+      var confirmar = document.getElementById("confirmar");
+      var cancelar = document.getElementById("cancelar");
+      
+      // Cuando el usuario haga clic en el botón, abra el modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      // Cuando el usuario haga clic en <span> (x), cierre el modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // Cuando el usuario haga clic en el botón de confirmación, procese la información del formulario y cierre el modal
+      confirmar.onclick = function() {
+        var nombre = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        // Procesar información del formulario aquí (por ejemplo, enviar a una base de datos)
+        modal.style.display = "none";
+      }
+      
+      // Cuando el usuario haga clic en el botón de cancelación, cierre el modal sin procesar la información del formulario
+      cancelar.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // Cuando el usuario haga clic fuera del modal, cierre el modal
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script> -->
+
+      <div id="app">
+        <button id="popup">crear</button>
+      </div>
+
+      <script>
+        const button = document.querySelector('#popup');
+        const container = document.querySelector('#app');
+        
+
+        //app.addEventListener('click',)
+
+        button.onclick = () => {
+            console.log('popup clicked');
+            const modal = `
+            <div class="ModalBackground">
+                put here your content
+            </div>
+            `;
+
+            container.insertAdjacentHTML('beforeend', modal);
+        }
+
+      </script>
+</body>
+</html>

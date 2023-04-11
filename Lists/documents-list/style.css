@@ -1,0 +1,16 @@
+.list {
+  padding: 20px;
+}
+.list li {
+  background-color: rgb(212, 212, 212);
+  width: 400px;
+  padding: 5px 10px 5px 20px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+.list__icon {
+  display: inline-block;
+}
+.list__title {
+  margin-left: 20px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog{
+            width: 50%;
+            /* height: 40%; */
+            height:fit-content;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            overflow: auto;
+            padding: 16px;
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            width: 100%;
+        }
+        form input {
+            flex: 1 0 300px;
+        }
+        footer{
+            display: flex;
+            padding-right: 6px;
+            gap: 12px;
+            justify-content: flex-end;
+            width: 100%;
+            margin: 12px 0;
+        }
+        footer button{
+            /* flex: 1 0 300px; */
+            width: 120px;
+            
+        }
+        dialog::backdrop{
+            background-color: rgba(0, 0, 0, 0.5) ;
+        }
+    </style>
+</head>
+<body>
+    <dialog>
+        <h2>Welcome</h2>
+        <p>Welcome to this website!!!</p>
+        <form action="">
+            <input type="text" name="" placeholder="Name">
+            <input type="text" name="" placeholder="Last Name">
+            <input type="email" name="" placeholder="example@gmail.com">
+            <input type="tel" name="" placeholder="Phone">
+            <footer>
+                <button id="AccpetBtn">Agree!</button>
+                <button id="closeBtn">close Modal</button>
+            </footer>
+        </form>
+        
+    </dialog>
+    <button id="openBtn">Open Modal</button>
+    
+    <script>
+        const dialog = document.querySelector('dialog');
+        const openBtn = document.querySelector('#openBtn');
+        const closeBtn = document.querySelector('#closeBtn');
+
+        openBtn.addEventListener('click', () => dialog.showModal());
+        closeBtn.addEventListener('click', () => dialog.close())
+
+    </script>
+</body>
+</html>

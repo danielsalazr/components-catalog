@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/" method="get" id="loginForm">
+        <div class="modal-body">
+            <div class="row">
+
+                <!-- 
+                Licencia
+                Tipo_licencia
+                Codigo_licecia
+                Activo_asignado
+                Vendedor
+                Precio -->
+
+
+                <div class="col-sm-6">
+                    <label for="activo" class="form-label">Licencia</label>
+                    <input type="text" class="form-control" id="activo" placeholder="" value="${activo}" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="Tipo_licencia" class="form-label">Tipo_licencia</label>
+                    <input type="text" class="form-control" id="Tipo_licencia" placeholder=""
+                        value="${data.infoActivo.sociedad}" >
+                </div>
+                <div class="col-sm-6">
+                    <label for="vendedor" class="form-label">vendedor</label>
+                    <input type="text" class="form-control" id="vendedor" placeholder=""
+                        value="${data.infoActivo.sociedad}" >
+                </div>
+                <div class="col-sm-6">
+                    <label for="precio" class="form-label">precio</label>
+                    <input type="number" class="form-control" id="precio" placeholder=""
+                        value="${data.infoActivo.sociedad}" >
+                </div>
+                <div class="col-sm-6">
+                    <label for="cantidad" class="form-label">cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" placeholder=""
+                        value="${data.infoActivo.sociedad}" >
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="ubicacion_final" class="form-label">Precio</label>
+                    <select class="form-select" id="sociedad_final" required="">
+                        <option value="">Choose...</option>
+                        ${data.sociedades.map((sociedades) => {
+                        return `<option value="${sociedades.id_razon_social}">${sociedades.nombre}</option> `
+                        })}
+                    </select>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="cedula_usuario_inicial" class="form-label">Cedula usuario anterior</label>
+                    <input type="text" class="form-control" id="cedula_usuario_inicial" placeholder=""
+                        value="${data.infoActivo.cedula_usuario_anterior}" required="" readonly>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="usuario_inicial" class="form-label">usuario anterior</label>
+                    <input type="text" class="form-control" id="usuario_inicial" placeholder=""
+                        value="${data.infoActivo.usuario_inicial}" required="" readonly>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="cedula_usuario_final" class="form-label">Cedula Usuario Final</label>
+                    <input type="text" class="form-control" name="cc" id="cedula_usuario_final" placeholder="" value=""
+                        required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label for="observaciones" class="form-label">Observaciones</label>
+                    <!-- <input type="text" class="form-control" id="ubicacion_anterior" placeholder="" value="" required=""> -->
+                    <textarea class="form-control" name="" id="observaciones" cols="30" rows="6"></textarea>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelButton">Close</button>
+                <button type="submit" class="btn btn-primary" id="activoConfirmation">Guardar</button>
+            </div>
+
+        </div>
+    </form>
+
+
+    <script>
+        let form = document.getElementById("loginForm");
+
+        form.addEventListener("submit", async (e) => {
+            console.log("presionado")
+            e.preventDefault();
+            let numeroActivo = document.getElementById("numeroActivo");
+            let usuarioAsignado = document.getElementById("usuarioAsignado");
+
+            // if (numeroActivo.value == "" && usuarioAsignado.value == "") {
+            //     // throw error
+            //     alert("Ensure you input a value in both fields!");
+            // } else {
+                // Obtiene los datos del formulario
+                const formData = new FormData(form);
+
+                console.log(formData);
+                console.log(formData.get('cc'))
+            // }
+        }
+        )
+    </script>
+</body>
+
+</html>

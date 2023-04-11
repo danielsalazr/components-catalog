@@ -1,0 +1,24 @@
+
+.list{
+
+    padding: 20px;
+
+    li{
+        background-color: rgb(212, 212, 212);
+        // width: fit-content;
+        width: 400px;
+        padding: 5px 10px 5px 20px;
+        // padding-right: 60px;
+        border-radius: 7px;
+        margin-bottom: 12px;
+    }
+
+    &__icon {
+        display: inline-block;
+    }
+    
+    &__title {
+        margin-left: 20px;
+    }
+}
+
