@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding: 16px;
+            line-height: 1.5;
+            background-color: hsla(0 0% 0% / 0.9);
+        }
+        details {
+            width: 300px;
+            background-color: #264c73;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        summary {
+            width: 100%;
+            padding: 16px;
+            background-color: #182c40;
+            box-sizing: border-box;
+            cursor: pointer;
+            color: #fff;
+        }
+        /* change default triangle icon */
+        /* summary::marker {
+            content: "👉";
+        }
+        details[open] summary::marker {
+            content: "👇";
+        } 
+        */
+       
+        .content{
+            padding: 5px 8px 10px;
+            margin: 0;
+        }
+        li{
+            padding: 0 32px;
+            margin: 0;
+            color: #fff;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .content li:hover{
+            /* background-color: #496078; */
+            color: #fd9122;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <details>
+        <summary> Proccessor capacity</summary>
+            <ul class="content">
+                <a href=""><li>1 GHz</li></a>
+                <a href=""><li>2 GHz</li></a>
+                <a href=""><li>4 GHz</li></a>
+            </ul>
+    </details>
+    <details>
+        <summary> Ram capacity</summary>
+            <ul class="content">
+                <a href=""><li>8 GB</li></a>
+                <a href=""><li>16 GB</li></a>
+                <a href=""><li>32 GB</li></a>
+            </ul>
+    </details>
+    <details>
+        <summary> Hard disk capacity</summary>
+            <ul class="content">
+                <a href=""><li>250 GB</li></a>
+                <a href=""><li>500 GB</li></a>
+                <a href=""><li>1000s GB</li></a>
+            </ul>
+    </details>
+
+    <script>
+        // close other details components when opens other
+
+        // Fetch all the details element.
+        const details = document.querySelectorAll("details");
+
+        // Add the onclick listeners.
+        details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+            // Close all the details that are not targetDetail.
+            details.forEach((detail) => {
+            if (detail !== targetDetail) {
+                detail.removeAttribute("open");
+            }
+            });
+        });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.modal-body {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.modal-dialog {
+  height: 85% !important;
+}
+.modal-content {
+  height: 100% !important;
+}
+
+@media (min-width: 992px){
+  .modal-lg, .modal-xl {
+      max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px){
+  .modal-xl {
+    max-width: 96%;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+      <div id="app">
+        <!-- <div class="ModalBackground">
+            <div class="modal">
+                <h1 class="modal__title">Agregar Activo Fijo</h1>
+                <form class="modal__form" action="">
+                    <select type="" placeholder="Razon social" id="RazonSocial" class="modal__input"> 
+                        <option value="" disabled selected hidden>- Razon social -</option>
+                    </select>
+                    <input placeholder="Placa" id="swal-input2" class="modal__input">
+                    <input placeholder="Serial" id="swal-input3" class="modal__input">
+                    <select placeholder="Area" id="swal-input4" class="modal__input">
+                        <option value="" disabled selected hidden>- Area -</option>
+                    </select>
+                    <input placeholder="Precio" id="swal-input5" class="modal__input">
+                    <input placeholder="Proveedor" id="swal-input6" class="modal__input">
+                    <input placeholder="Licencia" id="swal-input5" class="modal__input">
+                    <input placeholder="Ubicacion" id="swal-input5" class="modal__input">
+                    <input placeholder="Modelo" id="swal-input5" class="modal__input">
+                    <select placeholder="Tipo" id="swal-input5" class="modal__input">
+                        <option value="" disabled selected hidden>- Tipo -</option>
+                    </select>   
+                    <select placeholder="Marca" id="swal-input5" class="modal__input">
+                        <option value="" disabled selected hidden>- Marca -</option>
+                    </select>
+                    <input placeholder="Tipo Disco duro" id="swal-input5" class="modal__input">
+                    <input type="number" placeholder="Tamaño Ram" id="swal-input5" class="modal__input">
+                    <input type="number" placeholder="Tamaño disco duro" id="swal-input5" class="modal__input">
+                    <input type="date" placeholder="Fecha ingreso" id="swal-input5" class="modal__input"> 
+                    <input type="date" placeholder="ultimo Mantenimiento" id="swal-input5" class="modal__input"> 
+                </form>
+                <div class="modal__buttons"> 
+                    <button class="modal__buttons--confirm" id="confirmButton">OK</button>
+                    <button class="modal__buttons--cancel" id="cancelButton">Cancel</button>
+                </div>
+            </div>
+        </div> -->
+        <button id="popup">crear</button>
+      </div>
+
+      <script>
+        const button = document.querySelector('#popup');
+        const container = document.querySelector('#app');
+        const confirmButton = document.querySelector('#confirmButton')
+        
+        function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+        }
+
+        //app.addEventListener('click',)
+
+        button.onclick = () => {
+            console.log('popup clicked');
+            const modal = `
+            <div class="ModalBackground">
+                <div class="modal">
+                    <h1 class="modal__title">Agregar Activo Fijo</h1>
+                    <form class="modal__form" action="">
+                        <select type="" placeholder="Razon social" id="RazonSocial" class="modal__input"> 
+                            <option value="" disabled selected hidden>- Razon social -</option>
+                        </select>
+                        <input placeholder="Placa" id="swal-input2" class="modal__input">
+                        <input placeholder="Serial" id="swal-input3" class="modal__input">
+                        <select placeholder="Area" id="swal-input4" class="modal__input">
+                            <option value="" disabled selected hidden>- Area -</option>
+                        </select>
+                        <input placeholder="Precio" id="swal-input5" class="modal__input">
+                        <input placeholder="Proveedor" id="swal-input6" class="modal__input">
+                        <input placeholder="Licencia" id="swal-input5" class="modal__input">
+                        <input placeholder="Ubicacion" id="swal-input5" class="modal__input">
+                        <input placeholder="Modelo" id="swal-input5" class="modal__input">
+                        <select placeholder="Tipo" id="swal-input5" class="modal__input">
+                            <option value="" disabled selected hidden>- Tipo -</option>
+                        </select>   
+                        <select placeholder="Marca" id="swal-input5" class="modal__input">
+                            <option value="" disabled selected hidden>- Marca -</option>
+                        </select>
+                        <input placeholder="Tipo Disco duro" id="swal-input5" class="modal__input">
+                        <input type="number" placeholder="Tamaño Ram" id="swal-input5" class="modal__input">
+                        <input type="number" placeholder="Tamaño disco duro" id="swal-input5" class="modal__input">
+                        <input type="date" placeholder="Fecha ingreso" id="swal-input5" class="modal__input"> 
+                        <input type="date" placeholder="ultimo Mantenimiento" id="swal-input5" class="modal__input"> 
+                    </form>
+                    <div class="modal__buttons"> 
+                        <button class="modal__buttons--confirm" id="confirmButton">OK</button>
+                        <button class="modal__buttons--cancel" id="cancelButton">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            `;
+            container.insertAdjacentHTML('beforeend', modal);
+        }
+
+
+        // confirmButton.onclick = async () => {
+        //     //console.log('activos');
+        //     const csrftoken = getCookie('csrftoken');
+
+        //     const URL_ACTIVOS_FORM = 'http://localhost:8000/activos/getActivoFijoForm/';
+        //     const res = await fetch(URL_ACTIVOS_FORM,
+        //     {
+        //     method: 'GET',
+        //     headers: {'X-CSRFToken': csrftoken},
+        //     mode:'cors'// 'same-origin', // Do not send CSRF token to another domain.
+        //     }
+        //     );
+        //     const data = await res.json();
+
+        //     // if (res.status !== 200) {
+        //     //     spanError.innerHTML = "Hubo un error" + res.status + data.message;
+        //     // } else {
+        //     //     console.log(data);
+        //     // }
+
+        // }
+
+      </script>
+</body>
+</html>
