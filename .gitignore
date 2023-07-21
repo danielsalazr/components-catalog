@@ -77,3 +77,5 @@ icons/
 # End of https://www.toptal.com/developers/gitignore/api/images
 
 node_modules/
+
+*.config
