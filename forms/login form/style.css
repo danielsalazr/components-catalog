@@ -1,6 +1,12 @@
 body {
   height: 100vh;
   width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  outline: 1px solid #000000;
 }
 
 main {
@@ -17,7 +23,33 @@ main {
           align-items: center;
 }
 
-.loginForm {
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 200px);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.login__container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #FFFFFF;
+  border-radius: 40px;
+  padding: 60px 68px 40px;
+  min-height: 450px;
+  width: 300px;
+}
+.login__container__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,10 +66,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-.loginForm label {
-  margin-bottom: 8px;
-}
-.loginForm__input_w_label {
+.login__container__form--wlabel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,10 +74,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 320px;
-  margin: 2rem;
 }
-.loginForm__input_w_label input {
+.login__container__form--wlabel input {
   border-radius: 2px;
-  height: 56px;
+  height: 24px;
 }
