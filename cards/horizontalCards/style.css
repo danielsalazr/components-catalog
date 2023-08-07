@@ -1,0 +1,71 @@
+body {
+  margin: 16px;
+}
+
+.wrapper {
+  resize: horizontal;
+  overflow: auto;
+  container-name: card;
+  container-type: inline-size;
+  padding: 0 6px 4px 4px;
+}
+
+.horizontalCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 16px;
+  border-radius: 10px;
+  outline: 1px solid #bbbbbb;
+  width: clamp(240px, 100%, 1140px);
+}
+.horizontalCard img {
+  height: 180px;
+  width: 180px;
+}
+.horizontalCard__title {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.horizontalCard__content {
+  padding: 8px 32px;
+  width: 80%;
+}
+.horizontalCard__content--subcontent {
+  display: block;
+  background-color: aqua;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.horizontalCard__content--subcontent p {
+  display: block;
+  float: left;
+  clear: left;
+  width: 30%;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.horizontalCard__content--subcontent > span {
+  display: block;
+  float: right;
+  width: 60%;
+  margin-top: 4px;
+}
+.horizontalCard__content div {
+  display: block;
+}
+.horizontalCard__price {
+  display: inline;
+  color: #21ba45;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.horizontalCard__price--lastPrice {
+  font-size: 1rem;
+  color: gray;
+}
+.horizontalCard__discount {
+  font-weight: 600;
+}

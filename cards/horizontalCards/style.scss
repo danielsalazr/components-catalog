@@ -1,0 +1,94 @@
+
+// *{
+//     outline:  1px solid #bbbbbb;
+//     margin: 16px;
+// }
+
+body{
+    margin: 16px;
+}
+
+.wrapper {
+    resize: horizontal;
+    overflow: auto;
+    container-name: card;
+    container-type: inline-size;
+    padding: 0 6px 4px 4px;
+    
+}
+
+.horizontalCard{
+    display: flex;
+    padding: 16px 16px;
+    border-radius: 10px;
+    outline:  1px solid #bbbbbb;
+    width: clamp(240px, 100%, 1140px);
+    
+
+    img{
+        height: 180px;
+        width: 180px;
+    }
+
+    &__title{        
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    &__content{
+        // display: flex;
+        // flex-direction: column;
+        padding: 8px 32px;
+        width: 80%;
+
+        &--subcontent{
+            display: block;
+            background-color: aqua;
+            height: fit-content;
+
+            p{
+                display: block;
+                float: left;
+                clear: left;
+                width: 30%;
+                margin-top: 4px;
+                margin-bottom: 0;   
+            }
+            
+            > span{
+                display: block;
+                float: right;
+                // clear: right;
+                width: 60%;
+                margin-top: 4px;
+            };
+        }
+
+        div {
+            display: block;
+        }
+
+        
+    }
+
+    &__price{
+        display: inline;
+        color: #21ba45;
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        &--lastPrice{
+            font-size: 1rem;
+            color: gray;
+        }
+    }
+
+
+
+    &__discount{
+        font-weight: 600;
+    }
+
+
+}
