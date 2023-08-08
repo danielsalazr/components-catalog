@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Signuo form</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Create new account</h1>
+        <fieldset>
+            <div>
+                <label for="first_name">First Name: <span>*</span></label>
+                <input id="first_name" type="text" name="firstName" required>
+            </div>
+            <div>
+                <label for="last_name">Last Name: <span>*</span></label>
+                <input id="last_name" type="text" name="lastName" required>
+            </div>
+            <div class="checkbox">
+                <input id="newsletter" type="checkbox" name="newsletter" value="yes">
+                <label for="newsletter">Sign up for newsletter</label>
+            </div>
+            <div>
+                <label for="email">Email: <span>*</span></label>
+                <input id="email" type="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password: <span>*</span></label>
+                <input id="password" type="password" name="password" required>
+            </div>
+            <div>
+                <label for="passwordConfirmation">Confirm Password: <span>*</span></label>
+                <input id="passwordConfirmation" type="password" name="passwordConfirmation" required>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" name="passwordContent" id="passwordContent" value="yes">
+                <label for="passwordContent">See password</label>
+            </div>
+            <button type="submit">Create new account</button>
+        </fieldset>
+    </form>
+
+    <script src="./index.js"></script>
+</body>
+</html>

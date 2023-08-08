@@ -1,0 +1,68 @@
+
+// *{
+//     outline: 1px solid black;
+// }
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.footer{
+    padding: 30px;
+    background: #707173;
+    color: white;
+
+    a::after, a:active, a::before, a{
+        text-decoration: underline;
+        color: white;
+    }
+
+    &__container{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__info{
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        
+        > div{
+            height: 250px;
+            flex-grow: 1;
+            aspect-ratio: 1 / 1;
+            // padding: 8px;
+            // box-sizing: border-box;
+            
+            li{
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    // &__footer__aboutus{
+        
+    // }
+
+    // &__contactInfo{
+        
+    // }
+
+    // &__socialNetworks{
+
+    // }
+
+    &__navigation{
+        padding: 16px 8px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        nav > ul{
+            display: flex;
+            gap: 8px;
+        }
+    }
+}

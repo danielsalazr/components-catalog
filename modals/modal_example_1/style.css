@@ -24,34 +24,21 @@ body {
   right: -10px;
   bottom: -10px;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
 .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 60%;
   height: 60%;
   background-color: white;
   border-radius: 20px;
   color: black;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   min-width: 320px;
 }
@@ -60,38 +47,11 @@ body {
   margin-bottom: 20px;
 }
 .modal__form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding: 10px;
   justify-items: center;
-}
-.modal__form > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.modal__form > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-}
-.modal__form > *:nth-child(3) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-.modal__form > *:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-}
-.modal__form > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.modal__form > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
 }
 .modal__input {
   height: 30px;
@@ -100,14 +60,10 @@ body {
   font-size: 2rem;
 }
 .modal__confirmations {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 60%;
   height: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .modal__button {
   width: 40%;
@@ -116,7 +72,6 @@ body {
   border-radius: 5px;
   border: 1px solid white;
   font-size: 1.3rem;
-  -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
 .modal__button--accept {
@@ -133,4 +88,4 @@ body {
 }
 .modal__button--cancel:hover {
   background-color: #c82333;
-}
+}/*# sourceMappingURL=style.css.map */

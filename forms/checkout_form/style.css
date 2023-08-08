@@ -24,8 +24,7 @@ input, select {
 select {
   background: transparent;
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #666;
   -webkit-appearance: none;
   width: 100%;
@@ -42,8 +41,7 @@ select {
   font-size: 14px;
   top: 8px;
   right: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   position: absolute;
   z-index: -1;
 }
@@ -53,8 +51,6 @@ select {
 }
 
 .double-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -83,4 +79,4 @@ input:valid {
 
 input:invalid {
   border: 2px solid red;
-}
+}/*# sourceMappingURL=style.css.map */
