@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+.comment__card {
+  width: 380px;
+  padding: 16px 24px;
+  border: 1px solid #C7C7C7;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.comment__card > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+.comment__card > div figure {
+  margin: 0;
+}
+.comment__card > div figure img {
+  border-radius: 50%;
+}
+.comment__card > div div {
+  margin-left: 16px;
+}
+.comment__card > div div > span {
+  display: block;
+}
+.comment__card > div div :first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(114, 7, 214);
+}
+.comment__card p {
+  margin-bottom: 16px;
+}
+.comment__card button {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2rem;
+  background: #ffffff;
+  border: 1PX solid #C7C7C7;
+  border-radius: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.comment__card button:hover {
+  background: rgb(114, 7, 214);
+  color: #FFFFFF;
+}
+.comment__card button:active {
+  background: rgb(152, 74, 224);
+}

@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    // text-align: center;
+}
+
+.comment__card{
+    width: 380px;
+    padding: 16px 24px;
+    border: 1px solid #C7C7C7;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        figure {
+            margin: 0;
+
+            img{
+                border-radius: 50%;
+            }
+
+        }
+
+        div{
+            margin-left: 16px;
+            > span{
+                display: block;
+            }
+
+            :first-child{
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: rgb(114, 7, 214);
+            }
+        }
+    }
+
+    p{
+        margin-bottom: 16px;
+    }
+
+    button{
+        width: 100%;
+        padding: 8px;
+        font-size: 1.2rem;
+        background: #ffffff;
+        border: 1PX solid #C7C7C7;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+    
+    button:hover{
+        background: rgb(114, 7, 214);
+        color: #FFFFFF;
+    }
+
+    button:active{
+        background:rgb(152, 74, 224);
+    }
+
+    
+}
