@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+.order__card {
+  width: 300px;
+}
+.order__card h1 {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+.order__card .order__resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #F7F7F7;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 1px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.order__card .order__resume > p > span {
+  display: block;
+}
+.order__card .order__resume > p :nth-child(1) {
+  font-weight: bold;
+}
+.order__card .order__resume > span {
+  font-weight: bold;
+}
+.order__card .order__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 16px 1fr 16px auto 16px auto;
+  grid-template-columns: auto 1fr auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.order__card .order__item > figure {
+  margin: 0;
+}
+.order__card .order__item > figure > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+}
+.order__card .order__item :nth-child(2) {
+  color: #C7C7C7;
+}
+.order__card .order__item :nth-child(3) {
+  font-weight: bold;
+}
